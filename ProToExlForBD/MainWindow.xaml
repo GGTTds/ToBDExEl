@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProToExlForBD"
         mc:Ignorable="d"
-        Title="Меню" Height="215.545" Width="342.455">
+        Title="Меню" Height="215.545" Width="342.455" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid HorizontalAlignment="Left" Width="334" Height="186" VerticalAlignment="Top">
         <Button Click="CreaOtch_Click" Name="CreaOtch" Content=" Создать отчет" Height="30" Margin="93,31,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="157"/>
         <Button Click="Edit_Click" x:Name="Edit" Content=" Изменить продукцию" Height="30" Margin="93,75,0,0" HorizontalAlignment="Left" Width="157" VerticalAlignment="Top"/>

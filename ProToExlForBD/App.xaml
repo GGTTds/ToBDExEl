@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:ProToExlForBD"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+         </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="50"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

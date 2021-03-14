@@ -34,8 +34,14 @@ namespace ProToExlForBD
 
         private void EditBtn_Click_1(object sender, RoutedEventArgs e)
         {
-            ToNexForExl WW = new ToNexForExl((sender as Button).DataContext as Product, 1);
-            WW.Show();
+            try
+            {
+
+                ToNexForExl WW = new ToNexForExl((sender as Button).DataContext as Product, 1);
+                WW.Show();
+            }
+            catch
+            { }
         }
     }
 }
