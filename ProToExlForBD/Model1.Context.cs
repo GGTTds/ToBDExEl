@@ -12,27 +12,28 @@ namespace ProToExlForBD
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
-
-    public partial class Entities : DbContext
+    
+    public partial class QWER : DbContext
     {
-        public static Entities _context;
-        public Entities()
-            : base("name=Entities")
+        public static QWER _contect;
+        public QWER()
+            : base("name=QWER")
         {
-        }
-        public static Entities QWs()
-        {
-            if (_context == null)
-                _context = new Entities();
-            return _context;
         }
 
+        public static QWER WQER()
+        {
+            if (_contect == null)
+                _contect = new QWER();
+            return _contect;
+
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

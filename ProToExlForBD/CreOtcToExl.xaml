@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="CreOtcToExl" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="291" Margin="44,49,0,0" VerticalAlignment="Top" Width="706">
+        <DataGrid x:Name="DT" HorizontalAlignment="Left" Height="291" Margin="44,49,0,0" VerticalAlignment="Top" Width="706">
             <DataGrid.Columns>
-                <DataGridTextColumn/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -17,6 +17,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridTextColumn />
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Создать отчет" HorizontalAlignment="Left" VerticalAlignment="Top" Width="772" Margin="10,388,0,0"/>

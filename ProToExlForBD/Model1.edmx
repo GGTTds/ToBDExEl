@@ -4,11 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Ошибки, обнаруженные при создании:
-предупреждение 6013: Первичный ключ в таблице или представлении "PK-Kontur .dbo.Product" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+      <Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Product">
-          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="NomCher" Type="nvarchar" MaxLength="100" />
           <Property Name="PosOtv" Type="nvarchar" MaxLength="50" />
           <Property Name="Mass" Type="nvarchar" MaxLength="50" />
@@ -18,20 +19,155 @@
           <Property Name="ProxOtv" Type="nvarchar" MaxLength="50" />
           <Property Name="TrubRez" Type="nvarchar" MaxLength="50" />
           <Property Name="MetrRez" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
-        <EntityContainer Name="Хранилище ModelContainer" />
+          <Property Name="VnutXvos" Type="nvarchar" MaxLength="50" />
+          <Property Name="NarXvos" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProSRezSoe" Type="nvarchar" MaxLength="50" />
+          <Property Name="ScruRezFit" Type="nvarchar" MaxLength="50" />
+          <Property Name="NarOblKonCNakGai" Type="nvarchar" MaxLength="50" />
+          <Property Name="VnuPrisZakSize5" Type="nvarchar" MaxLength="50" />
+          <Property Name="VnuPrisZakSize6" Type="nvarchar" MaxLength="50" />
+          <Property Name="VnutKonCOblSet" Type="nvarchar" MaxLength="50" />
+          <Property Name="PramPodShar" Type="nvarchar" MaxLength="50" />
+          <Property Name="PramPodRuch" Type="nvarchar" MaxLength="50" />
+          <Property Name="RazPodKlu" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProxOtvPodBurt" Type="nvarchar" MaxLength="50" />
+          <Property Name="NarDiaBurt" Type="nvarchar" MaxLength="50" />
+          <Property Name="PramPodStok" Type="nvarchar" MaxLength="50" />
+          <Property Name="VisVZakSost" Type="nvarchar" MaxLength="50" />
+          <Property Name="VisVOtkSost" Type="nvarchar" MaxLength="50" />
+          <Property Name="RazPodStok" Type="nvarchar" MaxLength="50" />
+          <Property Name="PosOtvSoStorXvos" Type="nvarchar" MaxLength="50" />
+          <Property Name="PosPodProclSize5" Type="nvarchar" MaxLength="50" />
+          <Property Name="PosPodProclSize6" Type="nvarchar" MaxLength="50" />
+          <Property Name="VnutKZaklSize5" Type="nvarchar" MaxLength="50" />
+          <Property Name="VnutKZaklSize6" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityContainer Name="Хранилище ModelContainer">
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true" />
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NomCher" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PosOtv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BurtNar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Hei" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiaNar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProxOtv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrubRez" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MetrRez" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VnutXvos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NarXvos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProSRezSoe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ScruRezFit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NarOblKonCNakGai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VnuPrisZakSize5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VnuPrisZakSize6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VnutKonCOblSet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PramPodShar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PramPodRuch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RazPodKlu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProxOtvPodBurt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NarDiaBurt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PramPodStok" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VisVZakSost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VisVOtkSost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RazPodStok" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PosOtvSoStorXvos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PosPodProclSize5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PosPodProclSize6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VnutKZaklSize5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VnutKZaklSize6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="QWER" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Product" EntityType="Self.Product" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities" />
+        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="QWER">
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="Model.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NomCher" ColumnName="NomCher" />
+                <ScalarProperty Name="PosOtv" ColumnName="PosOtv" />
+                <ScalarProperty Name="Mass" ColumnName="Mass" />
+                <ScalarProperty Name="BurtNar" ColumnName="BurtNar" />
+                <ScalarProperty Name="Hei" ColumnName="Hei" />
+                <ScalarProperty Name="DiaNar" ColumnName="DiaNar" />
+                <ScalarProperty Name="ProxOtv" ColumnName="ProxOtv" />
+                <ScalarProperty Name="TrubRez" ColumnName="TrubRez" />
+                <ScalarProperty Name="MetrRez" ColumnName="MetrRez" />
+                <ScalarProperty Name="VnutXvos" ColumnName="VnutXvos" />
+                <ScalarProperty Name="NarXvos" ColumnName="NarXvos" />
+                <ScalarProperty Name="ProSRezSoe" ColumnName="ProSRezSoe" />
+                <ScalarProperty Name="ScruRezFit" ColumnName="ScruRezFit" />
+                <ScalarProperty Name="NarOblKonCNakGai" ColumnName="NarOblKonCNakGai" />
+                <ScalarProperty Name="VnuPrisZakSize5" ColumnName="VnuPrisZakSize5" />
+                <ScalarProperty Name="VnuPrisZakSize6" ColumnName="VnuPrisZakSize6" />
+                <ScalarProperty Name="VnutKonCOblSet" ColumnName="VnutKonCOblSet" />
+                <ScalarProperty Name="PramPodShar" ColumnName="PramPodShar" />
+                <ScalarProperty Name="PramPodRuch" ColumnName="PramPodRuch" />
+                <ScalarProperty Name="RazPodKlu" ColumnName="RazPodKlu" />
+                <ScalarProperty Name="ProxOtvPodBurt" ColumnName="ProxOtvPodBurt" />
+                <ScalarProperty Name="NarDiaBurt" ColumnName="NarDiaBurt" />
+                <ScalarProperty Name="PramPodStok" ColumnName="PramPodStok" />
+                <ScalarProperty Name="VisVZakSost" ColumnName="VisVZakSost" />
+                <ScalarProperty Name="VisVOtkSost" ColumnName="VisVOtkSost" />
+                <ScalarProperty Name="RazPodStok" ColumnName="RazPodStok" />
+                <ScalarProperty Name="PosOtvSoStorXvos" ColumnName="PosOtvSoStorXvos" />
+                <ScalarProperty Name="PosPodProclSize5" ColumnName="PosPodProclSize5" />
+                <ScalarProperty Name="PosPodProclSize6" ColumnName="PosPodProclSize6" />
+                <ScalarProperty Name="VnutKZaklSize5" ColumnName="VnutKZaklSize5" />
+                <ScalarProperty Name="VnutKZaklSize6" ColumnName="VnutKZaklSize6" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

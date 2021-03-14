@@ -22,6 +22,8 @@ namespace ProToExlForBD
         public CreOtcToExl()
         {
             InitializeComponent();
+            DT.ItemsSource = QWER.WQER().Product.ToList();
+           
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
