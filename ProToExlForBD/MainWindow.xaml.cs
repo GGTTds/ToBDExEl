@@ -39,7 +39,9 @@ namespace ProToExlForBD
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-
+            ToAddProduct WW = new ToAddProduct();
+            WW.Show();
+            this.Close();
         }
     }
 }

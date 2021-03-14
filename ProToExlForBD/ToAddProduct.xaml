@@ -5,71 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProToExlForBD"
         mc:Ignorable="d"
-        Title="Добавление изделия" Height="404.878" Width="760.496">
+        Title="Добавление изделия" Height="425.878" Width="856.496">
     <Grid>
         <Label Content=" Имя" Name="Nam" Margin="10,10,622,241" ></Label>
         <TextBox x:Name="N" Text="{Binding Name}" Margin="130,10,572,241" ></TextBox>
-        <Label Content=" Имя" x:Name="Nam_Copy" Margin="10,47,622,204" />
+        <Label Content="Чертеж" x:Name="Nam_Copy" Margin="10,47,622,204" />
         <TextBox x:Name="N_Copy" Text="{Binding Name}" Margin="130,47,572,204" />
-        <Label Content=" Имя" x:Name="Nam_Copy1" Margin="10,88,622,163" />
+        <Label Content="Ø посадочного отверстия, мм" x:Name="Nam_Copy1" Margin="10,88,622,163" />
         <TextBox x:Name="N_Copy1" Text="{Binding Name}" Margin="130,88,572,163" />
-        <Label Content=" Имя" x:Name="Nam_Copy2" Margin="10,126,622,125" />
+        <Label Content="Масса, г" x:Name="Nam_Copy2" Margin="10,126,622,125" />
         <TextBox x:Name="N_Copy2" Text="{Binding Name}" Margin="130,126,572,125" />
-        <Label Content=" Имя" x:Name="Nam_Copy3" Margin="10,161,622,90" />
+        <Label Content="Ø бурта наружный, мм" x:Name="Nam_Copy3" Margin="10,161,622,90" />
         <TextBox x:Name="N_Copy3" Text="{Binding Name}" Margin="130,161,572,90" />
-        <Label Content=" Имя" x:Name="Nam_Copy4" Margin="10,196,622,55" />
+        <Label Content="Высота, мм" x:Name="Nam_Copy4" Margin="10,196,622,55" />
         <TextBox x:Name="N_Copy4" Text="{Binding Name}" Margin="130,196,572,55" />
-        <Label Content=" Имя" x:Name="Nam_Copy5" Margin="375,9,257,242" />
+        <Label Content="Посадочный Ø под прокладку (SIZE 6)" x:Name="Nam_Copy5" Margin="375,9,257,242" />
         <TextBox x:Name="N_Copy5" Text="{Binding Name}" Margin="495,9,207,242" />
-        <Label Content=" Имя" x:Name="Nam_Copy6" Margin="375,47,257,204" />
+        <Label Content="Наружный диаметр бурта" x:Name="Nam_Copy6" Margin="375,47,257,204" Cursor="" />
         <TextBox x:Name="N_Copy6" Text="{Binding Name}" Margin="495,47,207,204" />
-        <Label Content=" Имя" x:Name="Nam_Copy7" Margin="189,10,443,241" />
+        <Label Content="Трубная резьба, мм" x:Name="Nam_Copy7" Margin="189,10,443,241" />
         <TextBox x:Name="N_Copy7" Text="{Binding Name}" Margin="309,10,393,241" />
-        <Label Content=" Имя" x:Name="Nam_Copy8" Margin="189,47,443,204" />
+        <Label Content="Метрическая резьба, мм" x:Name="Nam_Copy8" Margin="189,47,443,204" />
         <TextBox x:Name="N_Copy8" Text="{Binding Name}" Margin="309,47,393,204" />
-        <Label Content=" Имя" x:Name="Nam_Copy9" Margin="189,88,443,163" />
+        <Label Content="Внутренний Ø хвостовика, мм" x:Name="Nam_Copy9" Margin="189,88,443,163" />
         <TextBox x:Name="N_Copy9" Text="{Binding Name}" Margin="309,88,393,163" />
-        <Label Content=" Имя" x:Name="Nam_Copy10" Margin="189,126,443,125" />
+        <Label Content="Наружный  Ø хвостовика, мм" x:Name="Nam_Copy10" Margin="189,126,443,125" />
         <TextBox x:Name="N_Copy10" Text="{Binding Name}" Margin="309,126,393,125" />
-        <Label Content=" Имя" x:Name="Nam_Copy11" Margin="189,161,443,90" />
         <TextBox x:Name="N_Copy11" Text="{Binding Name}" Margin="309,161,393,90" />
-        <Label Content=" Имя" x:Name="Nam_Copy12" Margin="189,196,443,55" />
         <TextBox x:Name="N_Copy12" Text="{Binding Name}" Margin="309,196,393,55" />
-        <Label Content=" Имя" x:Name="Nam_Copy13" Margin="375,88,257,163" />
+        <Label Content="Внутренний диаметр в области контакта с сеткой, мм" x:Name="Nam_Copy13" Margin="375,88,257,163" />
         <TextBox x:Name="N_Copy13" Text="{Binding Name}" Margin="495,88,207,163" />
-        <Label Content=" Имя" x:Name="Nam_Copy14" Margin="375,126,257,125" />
+        <Label Content="Прямоугольник под ручку, мм" x:Name="Nam_Copy14" Margin="375,126,257,125" />
         <TextBox x:Name="N_Copy14" Text="{Binding Name}" Margin="495,126,207,125" />
-        <Label Content=" Имя" x:Name="Nam_Copy15" Margin="375,161,257,90" />
+        <Label Content="Прямоугольник под шар, мм" x:Name="Nam_Copy15" Margin="375,161,257,90" />
         <TextBox x:Name="N_Copy15" Text="{Binding Name}" Margin="495,161,207,90" />
-        <Label Content=" Имя" x:Name="Nam_Copy16" Margin="375,196,257,55" />
+        <Label Content="Прямоугольник под шток, мм" x:Name="Nam_Copy16" Margin="375,196,257,55" />
         <TextBox x:Name="N_Copy16" Text="{Binding Name}" Margin="495,196,207,55" />
-        <Label Content=" Имя" x:Name="Nam_Copy17" Margin="572,10,60,241" />
+        <Label Content="Ø проходн. отверстия под бурт , мм" x:Name="Nam_Copy17" Margin="572,10,60,241" />
         <TextBox x:Name="N_Copy17" Text="{Binding Name}" Margin="692,10,10,241" />
-        <Label Content=" Имя" x:Name="Nam_Copy18" Margin="572,47,60,204" />
+        <Label Content=" Внутренний Ø к закладной (SIZE 5)" x:Name="Nam_Copy18" Margin="572,47,60,204" Cursor="" />
         <TextBox x:Name="N_Copy18" Text="{Binding Name}" Margin="692,47,10,204" />
-        <Label Content=" Имя" x:Name="Nam_Copy19" Margin="572,88,60,163" />
+        <Label Content=" Посадочное отверстие со стороны хвостика" x:Name="Nam_Copy19" Margin="572,88,60,163" />
         <TextBox x:Name="N_Copy19" Text="{Binding Name}" Margin="692,88,10,163" />
-        <Label Content=" Имя" x:Name="Nam_Copy20" Margin="572,126,60,125" />
+        <Label Content=" Посадочный Ø под прокладку (SIZE 5)" x:Name="Nam_Copy20" Margin="572,126,60,125" />
         <TextBox x:Name="N_Copy20" Text="{Binding Name}" Margin="692,126,10,125" />
-        <Label Content=" Имя" x:Name="Nam_Copy21" Margin="572,161,60,90" />
+        <Label Content="Высота в открытом состоянии" x:Name="Nam_Copy21" Margin="572,161,60,90" />
         <TextBox x:Name="N_Copy21" Text="{Binding Name}" Margin="692,161,10,90" />
-        <Label Content=" Имя" x:Name="Nam_Copy22" Margin="572,196,60,55" />
+        <Label Content="Высота в закрытом состоянии" x:Name="Nam_Copy22" Margin="572,196,60,55" />
         <TextBox x:Name="N_Copy22" Text="{Binding Name}" Margin="692,196,10,55" />
-        <Label Content=" Имя" x:Name="Nam_Copy23" Margin="10,278,622,67" />
+        <Label Content=" Ø наружный, мм" x:Name="Nam_Copy23" Margin="10,278,622,67" />
         <TextBox x:Name="N_Copy23" Text="{Binding Name}" Margin="130,278,572,67" />
-        <Label Content=" Имя" x:Name="Nam_Copy24" Margin="189,278,443,67" />
+        <Label Content=" Нар.Ø в обл.контакта с накид.гайкой" x:Name="Nam_Copy24" Margin="189,278,443,67" />
         <TextBox x:Name="N_Copy24" Text="{Binding Name}" Margin="309,278,393,67" />
-        <Label Content=" Имя" x:Name="Nam_Copy25" Margin="375,278,257,67" />
+        <Label Content="Размер под ключ" x:Name="Nam_Copy25" Margin="375,278,257,67" />
         <TextBox x:Name="N_Copy25" Text="{Binding Name}" Margin="495,278,207,67" />
-        <Label Content=" Имя" x:Name="Nam_Copy26" Margin="572,278,60,67" />
+        <Label Content="&quot;Внутренний Ø к закладной (SIZE 5)" x:Name="Nam_Copy26" Margin="572,278,60,67" />
         <TextBox x:Name="N_Copy26" Text="{Binding Name}" Margin="692,278,10,67" />
-        <Label Content=" Имя" x:Name="Nam_Copy27" Margin="10,313,622,32" />
+        <Label Content="Ø Проходное отвестие, мм" x:Name="Nam_Copy27" Margin="10,313,622,32" />
         <TextBox x:Name="N_Copy27" Text="{Binding Name}" Margin="130,313,572,32" />
-        <Label Content=" Имя" x:Name="Nam_Copy28" Margin="189,313,443,32" />
+        <Label Content="Внутренний Ø в месте присоединения к закладной (SIZE 5)" x:Name="Nam_Copy28" Margin="189,313,443,32" />
         <TextBox x:Name="N_Copy28" Text="{Binding Name}" Margin="309,313,393,32" />
-        <Label Content=" Имя" x:Name="Nam_Copy29" Margin="375,313,257,32" />
+        <Label Content="Размер под шток" x:Name="Nam_Copy29" Margin="375,313,257,32" />
         <TextBox x:Name="N_Copy29" Text="{Binding Name}" Margin="495,313,207,32" />
-        <Label Content=" Имя" x:Name="Nam_Copy30" Margin="572,313,60,32" />
+        <Label Content="Внутренний Ø к закладной (SIZE 6)" x:Name="Nam_Copy30" Margin="572,313,60,32" />
         <TextBox x:Name="N_Copy30" Text="{Binding Name}" Margin="692,313,10,32" />
+        <TextBlock FontSize="19" Margin="282,10,0,0" TextWrapping="Wrap" Text="Добавления изделия" VerticalAlignment="Top" Height="25" HorizontalAlignment="Left" Width="186"/>
     </Grid>
 </Window>

@@ -29,6 +29,10 @@ namespace ProToExlForBD
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
+          
+            MainWindow WW = new MainWindow();
+            WW.Show();
+            this.Close();
 
         }
 

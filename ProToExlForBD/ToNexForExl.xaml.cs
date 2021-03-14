@@ -295,7 +295,7 @@ namespace ProToExlForBD
 
             worksheet.Columns.AutoFit();
             App.Visible = true;
-            if (App.Visible = true)
+            if (App.Visible == true)
             { this.Close(); }
       
         
