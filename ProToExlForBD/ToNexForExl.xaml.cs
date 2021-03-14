@@ -56,12 +56,23 @@ namespace ProToExlForBD
             Excel.Worksheet worksheet = App.Worksheets.Item[StartIndex];
             worksheet.Name = " Накладная ";
             worksheet.Cells[1][StartIndex] = " Завод ";
+            Excel.Range Head3 = worksheet.Range[worksheet.Cells[2][StartIndex], worksheet.Cells[5][StartIndex]];
+            Head3.Merge();
             StartIndex += 1;
+
             worksheet.Cells[1][StartIndex] = " Наименование ";
+            Excel.Range Head4 = worksheet.Range[worksheet.Cells[2][StartIndex], worksheet.Cells[5][StartIndex]];
+            Head4.Merge();
+            worksheet.Cells[2][StartIndex] = _currentTovar.Name;
             StartIndex += 1;
             worksheet.Cells[1][StartIndex] = " Поступило штук ";
+            Excel.Range Head5 = worksheet.Range[worksheet.Cells[2][StartIndex], worksheet.Cells[5][StartIndex]];
+            Head5.Merge();
             StartIndex += 1;
             worksheet.Cells[1][StartIndex] = " П№ чертежа ";
+            Excel.Range Head6 = worksheet.Range[worksheet.Cells[2][StartIndex], worksheet.Cells[5][StartIndex]];
+            Head6.Merge();
+            worksheet.Cells[2][StartIndex] = _currentTovar.NomCher;
             StartIndex += 1;
             worksheet.Cells[1][StartIndex] = " ВидПроверки ";
             worksheet.Cells[2][StartIndex] = " Норма ";
@@ -72,48 +83,60 @@ namespace ProToExlForBD
             if (_currentTovar.PosOtv !=null)
             {
                 worksheet.Cells[1][StartIndex] = " Ø посадочного отверстия, мм ";
+                worksheet.Cells[2][StartIndex] = _currentTovar.PosOtv;
+
                 StartIndex += 1;
+
             }
             worksheet.Cells[1][StartIndex] = " Масса,г ";
+            worksheet.Cells[2][StartIndex] = _currentTovar.Mass;
             StartIndex += 1;
             if( _currentTovar.BurtNar !=null)
             {
                 worksheet.Cells[1][StartIndex] = " Ø бурта наружный, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.BurtNar;
                 StartIndex += 1;
             }
             if (_currentTovar.Hei != null)
             {
                 worksheet.Cells[1][StartIndex] = "Высота, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.Hei;
                 StartIndex += 1;
             }
             if (_currentTovar.DiaNar != null)
             {
                 worksheet.Cells[1][StartIndex] = " Ø наружный, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.DiaNar;
                 StartIndex += 1;
             }
             if (_currentTovar.ProxOtv != null)
             {
                 worksheet.Cells[1][StartIndex] = " Ø Проходное отвестие, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.ProxOtv;
                 StartIndex += 1;
             }
             if (_currentTovar.TrubRez != null)
             {
                 worksheet.Cells[1][StartIndex] = " Трубная резьба, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.TrubRez;
                 StartIndex += 1;
             }
             if (_currentTovar.MetrRez != null)
             {
                 worksheet.Cells[1][StartIndex] = "Метрическая резьба, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.MetrRez;
                 StartIndex += 1;
             }
             if (_currentTovar.VnutXvos != null)
             {
                 worksheet.Cells[1][StartIndex] = " Внутренний Ø хвостовика, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VnutXvos;
                 StartIndex += 1;
             }
             if (_currentTovar.NarXvos != null)
             {
                 worksheet.Cells[1][StartIndex] = " Наружный  Ø хвостовика, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.NarXvos;
                 StartIndex += 1;
             }
             if (_currentTovar.ProSRezSoe != null)
@@ -155,91 +178,109 @@ namespace ProToExlForBD
             if (_currentTovar.NarOblKonCNakGai != null)
             {
                 worksheet.Cells[1][StartIndex] = " Нар.Ø в обл.контакта с накид.гайкой";
+                worksheet.Cells[2][StartIndex] = _currentTovar.NarOblKonCNakGai;
                 StartIndex += 1;
             }
             if (_currentTovar.VnuPrisZakSize5 != null)
             {
                 worksheet.Cells[1][StartIndex] = "Внутренний Ø в месте присоединения к закладной (SIZE 5)";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VnuPrisZakSize5;
                 StartIndex += 1;
             }
             if (_currentTovar.PosPodProclSize6 != null)
             {
                 worksheet.Cells[1][StartIndex] = "Посадочный Ø под прокладку (SIZE 6)";
+                worksheet.Cells[2][StartIndex] = _currentTovar.PosPodProclSize6;
                 StartIndex += 1;
             }
             if (_currentTovar.NarDiaBurt != null)
             {
                 worksheet.Cells[1][StartIndex] = "Наружный диаметр бурта";
+                worksheet.Cells[2][StartIndex] = _currentTovar.NarDiaBurt;
                 StartIndex += 1;
             }
             if (_currentTovar.VnutKonCOblSet != null)
             {
                 worksheet.Cells[1][StartIndex] = "Внутренний диаметр в области контакта с сеткой, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VnutKonCOblSet;
                 StartIndex += 1;
             }
             if (_currentTovar.PramPodRuch != null)
             {
                 worksheet.Cells[1][StartIndex] = "Прямоугольник под ручку, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.PramPodRuch;
                 StartIndex += 1;
             }
             if (_currentTovar.PramPodShar != null)
             {
                 worksheet.Cells[1][StartIndex] = "Прямоугольник под шар, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.PramPodShar;
                 StartIndex += 1;
             }
             if (_currentTovar.PramPodStok != null)
             {
                 worksheet.Cells[1][StartIndex] = "Прямоугольник под шток, мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.PramPodStok;
                 StartIndex += 1;
             }
             if (_currentTovar.RazPodKlu != null)
             {
                 worksheet.Cells[1][StartIndex] = "Размер под ключ";
+                worksheet.Cells[2][StartIndex] = _currentTovar.RazPodKlu;
                 StartIndex += 1;
             }
             if (_currentTovar.RazPodStok != null)
             {
                 worksheet.Cells[1][StartIndex] = "Размер под шток";
+                worksheet.Cells[2][StartIndex] = _currentTovar.RazPodStok;
                 StartIndex += 1;
             }
             if (_currentTovar.ProxOtvPodBurt != null)
             {
                 worksheet.Cells[1][StartIndex] = "Ø проходн. отверстия под бурт , мм";
+                worksheet.Cells[2][StartIndex] = _currentTovar.ProxOtvPodBurt;
                 StartIndex += 1;
             }
             if (_currentTovar.VnuPrisZakSize6 != null)
             {
                 worksheet.Cells[1][StartIndex] = " Внутренний Ø к закладной (SIZE 5)";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VnuPrisZakSize6;
                 StartIndex += 1;
             }
             if (_currentTovar.PosOtvSoStorXvos != null)
             {
                 worksheet.Cells[1][StartIndex] = " Посадочное отверстие со стороны хвостика";
+                worksheet.Cells[2][StartIndex] = _currentTovar.PosOtvSoStorXvos;
                 StartIndex += 1;
             }
             if (_currentTovar.PosPodProclSize5 != null)
             {
                 worksheet.Cells[1][StartIndex] = " Посадочный Ø под прокладку (SIZE 5)";
+                worksheet.Cells[2][StartIndex] = _currentTovar.PosPodProclSize5;
                 StartIndex += 1;
             }
             if (_currentTovar.VisVOtkSost != null)
             {
                 worksheet.Cells[1][StartIndex] = "Высота в открытом состоянии";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VisVOtkSost;
                 StartIndex += 1;
             }
             if (_currentTovar.VisVZakSost != null)
             {
                 worksheet.Cells[1][StartIndex] = "Высота в закрытом состоянии";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VisVZakSost;
                 StartIndex += 1;
             }
             if (_currentTovar.VnutKZaklSize5 != null)
             {
                 worksheet.Cells[1][StartIndex] = "Внутренний Ø к закладной (SIZE 5)";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VnutKZaklSize5;
                 StartIndex += 1;
             }
             if (_currentTovar.VnutKZaklSize5 != null)
             {
                 worksheet.Cells[1][StartIndex] = "Внутренний Ø к закладной (SIZE 6)";
+                worksheet.Cells[2][StartIndex] = _currentTovar.VnutKZaklSize6;
                 StartIndex += 1;
             }
 
