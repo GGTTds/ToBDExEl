@@ -19,11 +19,12 @@ namespace ProToExlForBD
     /// </summary>
     public partial class CreOtcToExl : Window
     {
-        public CreOtcToExl()
+      
+        public CreOtcToExl( )
         {
             InitializeComponent();
             DT.ItemsSource = QWER.WQER().Product.ToList();
-           
+          
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
@@ -33,7 +34,8 @@ namespace ProToExlForBD
 
         private void EditBtn_Click_1(object sender, RoutedEventArgs e)
         {
-
+            ToNexForExl WW = new ToNexForExl((sender as Button).DataContext as Product, 1);
+            WW.Show();
         }
     }
 }
